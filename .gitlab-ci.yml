@@ -57,8 +57,8 @@ docker-deploy-job:
     DOCKER_TLS_CERTDIR: ""
   dependencies:
     - backend-build-job
-  rules:
-   - if: $CI_COMMIT_REF_NAME == "main"
+  #rules:
+  # - if: $CI_COMMIT_REF_NAME == "main"
   script:
     - echo "Building & Deploying Docker Image..."
     - docker logout
